@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Music</title>
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/responsive.css" />
+    <script src="./src/scripts/index.js" type="module" defer></script>
   </head>
   <body>
-    <!-- CABEÇALHO -->
-    <header>
-      <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
+    <header class="header container drop">
+      <h1 class="header__title title1"><span class="header__title title1--purple">o</span>pen <span class="header__title title1--purple">m</span>usic</h1>
+      <button class="header__btn" aria-label="Alternar tema"></button>
     </header>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-      <!-- SEÇÃO DE FILTRO POR GENERO -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+    <main class="container">
+      <section class="genres slide">
+        <h2 class="genres__title title2">Gênero Musical</h2>
+        <ul class="genres__list">
+        </ul>
+      </section>
+      <section class="price-range">
+        <div class="price-range__container">
+          <h2 class="price-range__title title2">Definir Preço</h2>
+          <h3 class="price-range__value title3">
+            Até <span class="price-range__value--dynamic">R$ 100,00</span>
+          </h3>
+        </div>
+        <input
+          id="input-price"
+          class="price__input-range"
+          type="range"
+          name="price"
+          min="0"
+          max="100"
+          value="100"
+          aria-label="Filtrar por preço"
+        />
       </section>
 
-      <!-- SEÇÃO DE FILTRO POR PREÇO -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-      </section>
-
-      <!-- SEÇÃO DE ALBUNS -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+      <section class="albums">
+        <h2 class="albums__title title2">Álbuns Encontrados</h2>
+        <ul class="albums__list">
+        </ul>
       </section>
     </main>
   </body>
